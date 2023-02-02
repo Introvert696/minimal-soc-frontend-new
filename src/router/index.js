@@ -1,25 +1,76 @@
-import { createRouter, createWebHashHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import LoginView from "../views/LoginView";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: LoginView,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/login",
+    name: "login",
+    component: LoginView,
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: LoginView,
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: LoginView,
+  },
+  {
+    path: "/profile/:id",
+    name: "getProfile",
+    component: LoginView,
+  },
+  {
+    path: "/profile/edit",
+    name: "editProfile",
+    component: LoginView,
+  },
+  {
+    path: "/feed",
+    name: "feed",
+    component: LoginView,
+  },
+  {
+    path: "/post/:id",
+    name: "selectPost",
+    component: LoginView,
+  },
+  {
+    path: "/mail",
+    name: "mail",
+    component: LoginView,
+  },
+  {
+    path: "/mail/:id",
+    name: "selectedMail",
+    component: LoginView,
+  },
+  {
+    path: "/document",
+    name: "document",
+    component: LoginView,
+  },
+  {
+    path: "/group",
+    name: "group",
+    component: LoginView,
+  },
+  {
+    path: "/group/:id",
+    name: "selectedGroup",
+    component: LoginView,
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
