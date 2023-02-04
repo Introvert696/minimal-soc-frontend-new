@@ -1,0 +1,26 @@
+<template>
+  <form class="board login-board">
+    <logo />
+    <logininput type="text" name="email" placeholder="email" />
+    <logininput type="password" name="password" placeholder="password" />
+    <btnlogin />
+    <downbuttonlink text="can you need register?" link="http://vk.com" />
+  </form>
+</template>
+
+<script>
+import logininput from "@/components/login/logininput.vue";
+import logo from "@/components/logo.vue";
+import btnlogin from "@/components/login/btnlogin.vue";
+import downbuttonlink from "@/components/login/downbuttonlink.vue";
+
+export default {
+  name: "loginform",
+  components: {
+    logininput,
+    logo,
+    btnlogin,
+    downbuttonlink,
+  },
+};
+</script>

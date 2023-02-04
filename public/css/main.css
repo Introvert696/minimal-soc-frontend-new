@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&display=swap");
+/* LOGO CSS START */
+.logo {
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.logo p {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+}
+.logo span {
+  font-size: 14px;
+}
+/* LOGO CSS END */
+body {
+  background-color: #2b2b2b;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/* LOGIN START */
+.board {
+  border-radius: 10px;
+  background-color: #353535;
+  width: 325px;
+  margin: auto;
+  padding-bottom: 20px;
+  margin-top: 15%;
+}
+.login-board {
+  height: 361px;
+}
+.test-border {
+  /* border: 1px solid red; */
+}
+.input-login {
+  margin: auto;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+}
+.input-login input {
+  margin: auto;
+  width: 260px;
+  height: 40px;
+  background-color: #646464;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 40px;
+
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.input-login input::placeholder {
+  color: white;
+}
+
+.login-btn {
+  margin: auto;
+  text-align: center;
+}
+.login-btn input {
+  margin-top: 45px;
+  width: 270px;
+  height: 40px;
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.form-link {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+/* LOGIN END */
