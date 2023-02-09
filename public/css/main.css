@@ -88,7 +88,7 @@ a {
 /* board start */
 .menu-board {
   width: 240px;
-  min-height: 360px;
+  height: 360px;
   background-color: #353535;
   border-radius: 10px;
   padding-bottom: 20px;
@@ -106,15 +106,16 @@ a {
   margin-bottom: 10px;
 }
 .user-header-info {
-  width: 70%;
-
+  width: 60vw;
+  margin-left: 30px;
   height: 300px;
   background-color: #353535;
   border-radius: 10px;
 }
 .profilecontent {
-  width: 80vw;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 .user-header-info img {
   width: 100%;
@@ -149,4 +150,79 @@ a {
 }
 .profile-nav-link {
   margin-right: 30px;
+}
+.create-post-form {
+  margin: auto;
+  width: 50vw;
+  background-color: #353535;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.create-post-form input {
+  height: 35px;
+  border-radius: 10px;
+  background-color: #353535;
+  border: none;
+  width: 80%;
+  outline: none;
+  color: white;
+  padding-left: 15px;
+}
+.create-post-form input ::placeholder {
+  color: white;
+}
+.create-post-form button {
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #353535;
+  color: white;
+  font-size: 12px;
+}
+.post-board {
+  width: 50vw;
+  min-height: 50px;
+  margin: auto;
+  background-color: #353535;
+  border-radius: 10px;
+  margin-top: 30px;
+  color: white;
+}
+.post-board-header {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.post-board-header-user-info {
+  margin-left: 30px;
+  margin-top: 13px;
+}
+.post-board-header-user-info img {
+  border-radius: 50px;
+}
+.post-board-header-user-info-title {
+  margin-top: 5%;
+  margin-left: 10px;
+}
+.post-board-header-user-info-title p {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.post-board-header-user-info-title span {
+  font-size: 12px;
+}
+.post-board-header-user-info-date {
+  margin-right: 33px;
+  font-size: 10px;
+  margin-top: 2%;
+}
+.post-board-content {
+  font-size: 12px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 20px;
 }

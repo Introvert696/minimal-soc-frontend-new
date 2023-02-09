@@ -69,6 +69,16 @@ const routes = [
     name: "selectedGroup",
     component: LoginView,
   },
+  {
+    path: "/setting",
+    name: "setting",
+    component: LoginView,
+  },
+  {
+    path: "/exit",
+    name: "exit",
+    component: LoginView,
+  },
 ];
 
 const router = createRouter({

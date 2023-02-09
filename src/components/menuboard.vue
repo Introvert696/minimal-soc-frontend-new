@@ -3,7 +3,7 @@
     <logo />
     <div class="menu-links">
       <div class="link">
-        <a href="#">Мой профиль</a>
+        <a href="/profile">Мой профиль</a>
         <img
           src="@/assets/001-user.png"
           alt="user-icon"
@@ -12,7 +12,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Лента</a>
+        <a href="/feed">Лента</a>
         <img
           src="@/assets/004-newspaper.png"
           alt="feed-icon"
@@ -21,7 +21,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Сообщения</a>
+        <a href="/mail">Сообщения</a>
         <img
           src="@/assets/008-messenger.png"
           alt="message-icon"
@@ -30,7 +30,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Друзья</a>
+        <a href="/friend">Друзья</a>
         <img
           src="@/assets/005-friends.png"
           alt="friend-icon"
@@ -39,7 +39,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Группы</a>
+        <a href="/group">Группы</a>
         <img
           src="@/assets/006-group.png"
           alt="group-icon"
@@ -48,7 +48,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Документы</a>
+        <a href="/document">Документы</a>
         <img
           src="@/assets/002-google-docs.png"
           alt="document-icon"
@@ -57,7 +57,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Настройки</a>
+        <a href="/setting">Настройки</a>
         <img
           src="@/assets/003-settings.png"
           alt="setting-icon"
@@ -66,7 +66,7 @@
         />
       </div>
       <div class="link">
-        <a href="#">Выход</a>
+        <a href="/exit">Выход</a>
         <img
           src="@/assets/007-exit.png"
           alt="exit-icon"
