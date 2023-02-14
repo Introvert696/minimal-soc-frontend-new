@@ -3,6 +3,7 @@ import LoginView from "../views/LoginView";
 import RegisterView from "../views/RegisterView";
 import ProfileView from "../views/ProfileView";
 import FeedView from "../views/FeedView.vue";
+import MailView from "../views/MailView";
 
 const routes = [
   {
@@ -48,7 +49,7 @@ const routes = [
   {
     path: "/mail",
     name: "mail",
-    component: LoginView,
+    component: MailView,
   },
   {
     path: "/mail/:id",

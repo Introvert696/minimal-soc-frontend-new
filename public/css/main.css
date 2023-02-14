@@ -236,3 +236,42 @@ a {
 .posts {
   width: 70vw;
 }
+.search-dialog-form {
+  margin: auto;
+}
+.mailview-content {
+  margin-left: 35px;
+  margin-top: 35px;
+}
+
+.dialog-board {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #353535;
+  margin: auto;
+  text-align: right;
+  margin-top: 15px;
+  border-radius: 10px;
+  text-align: left;
+  justify-content: left;
+  color: white;
+  cursor: pointer;
+}
+.dialog-board img {
+  margin-top: 12px;
+  margin-left: 25px;
+  border-radius: 50px;
+}
+.text-dialog-board {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.text-dialog-board p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+}
+.text-dialog-board span {
+  font-size: 12px;
+}
