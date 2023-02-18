@@ -275,3 +275,43 @@ a {
 .text-dialog-board span {
   font-size: 12px;
 }
+.notFound {
+  text-align: center;
+  margin-top: 40vh;
+  color: white;
+}
+.friend-view-board {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+}
+.friend-box {
+  margin-left: 50px;
+}
+.search-user-form {
+  display: flex;
+  width: 60vw;
+  background-color: #353535;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 35px;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.search-user-form input {
+  height: 35px;
+  background-color: #353535;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: White;
+  width: 80%;
+  padding-left: 18px;
+  font-size: 12px;
+}
+.search-user-form button {
+  color: #696969;
+  background-color: #353535;
+  border: none;
+  font-size: 12px;
+}

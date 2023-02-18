@@ -4,12 +4,19 @@ import RegisterView from "../views/RegisterView";
 import ProfileView from "../views/ProfileView";
 import FeedView from "../views/FeedView.vue";
 import MailView from "../views/MailView";
+import FriendView from "../views/FriendView";
+import NotFound from "../views/NotFound";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: LoginView,
+  },
+  {
+    path: "/friend",
+    name: "friend",
+    component: FriendView,
   },
   {
     path: "/login",
@@ -80,6 +87,11 @@ const routes = [
     path: "/exit",
     name: "exit",
     component: LoginView,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
