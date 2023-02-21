@@ -315,3 +315,34 @@ a {
   border: none;
   font-size: 12px;
 }
+
+.friend-board {
+  display: flex;
+  margin: auto;
+  height: 70px;
+  background-color: #353535;
+  width: 90%;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+}
+.friend-board p {
+  margin: 0;
+  margin-top: 10px;
+}
+.friend-board img {
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.friend-board-text {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.friend-board-text p {
+  font-weight: 800;
+}
+.friend-board-text a {
+  font-size: 12px;
+}
