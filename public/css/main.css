@@ -3,6 +3,9 @@
   display: flex;
   justify-content: space-between;
 }
+.mgAuto {
+  margin: auto;
+}
 /* LOGO CSS START */
 .logo {
   text-align: center;
@@ -345,4 +348,30 @@ a {
 }
 .friend-board-text a {
   font-size: 12px;
+}
+.selection-mail-content {
+  width: 60vw;
+  min-height: 60vh;
+
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.selection-mail-board {
+  display: flex;
+  justify-content: center;
+}
+.selection-mail-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #353535;
+  color: white;
+}
+.selection-mail-header-menu {
+  margin-right: 30px;
+}
+.selection-mail-header-title p {
+  font-size: 14px;
 }

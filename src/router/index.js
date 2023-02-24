@@ -6,6 +6,7 @@ import FeedView from "../views/FeedView.vue";
 import MailView from "../views/MailView";
 import FriendView from "../views/FriendView";
 import NotFound from "../views/NotFound";
+import SelectedMailView from "../views/SelectedMailView";
 
 const routes = [
   {
@@ -61,7 +62,7 @@ const routes = [
   {
     path: "/mail/:id",
     name: "selectedMail",
-    component: LoginView,
+    component: SelectedMailView,
   },
   {
     path: "/document",
