@@ -5,6 +5,7 @@
       <searchuserform />
       <div class="friends-list">
         <friendboard />
+
         <friendboard />
         <friendboard />
         <friendboard />
