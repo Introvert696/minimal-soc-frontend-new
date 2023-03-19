@@ -7,6 +7,7 @@ import MailView from "../views/MailView";
 import FriendView from "../views/FriendView";
 import NotFound from "../views/NotFound";
 import SelectedMailView from "../views/SelectedMailView";
+import DocumentsView from "@/views/DocumentsView.vue";
 
 const routes = [
   {
@@ -67,7 +68,7 @@ const routes = [
   {
     path: "/document",
     name: "document",
-    component: LoginView,
+    component: DocumentsView,
   },
   {
     path: "/group",
