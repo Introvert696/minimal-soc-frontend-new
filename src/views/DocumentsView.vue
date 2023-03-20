@@ -4,6 +4,8 @@
     <resultbox />
     <resultbox />
     <resultbox />
+    <resultbox />
+    <resultbox />
   </mainlayout>
 </template>
 

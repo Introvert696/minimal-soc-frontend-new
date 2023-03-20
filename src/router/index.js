@@ -8,6 +8,7 @@ import FriendView from "../views/FriendView";
 import NotFound from "../views/NotFound";
 import SelectedMailView from "../views/SelectedMailView";
 import DocumentsView from "@/views/DocumentsView.vue";
+import GroupProfileVIew from "@/views/GroupProfileView.vue";
 
 const routes = [
   {
@@ -78,7 +79,7 @@ const routes = [
   {
     path: "/group/:id",
     name: "selectedGroup",
-    component: LoginView,
+    component: GroupProfileVIew,
   },
   {
     path: "/setting",

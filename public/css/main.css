@@ -517,3 +517,69 @@ a {
   margin-left: auto;
   margin-right: 20px;
 }
+/* profileinfo */
+.gr-board {
+  width: 80%;
+  margin: auto;
+  height: 120px;
+  background-color: #353535;
+  border-radius: 10px;
+  justify-content: left;
+  color: white;
+  font-size: 16px;
+  margin-top: 40px;
+}
+.left-gr-side img {
+  margin: 10px 0 0 20px;
+}
+.title-gr-board {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.title-gr-board p {
+  margin: 0;
+  font-weight: 800;
+}
+.link-gr-board {
+  margin-left: 20px;
+  font-size: 14px;
+}
+.link-gr-board a {
+  margin-top: 15px;
+  margin-right: 50px;
+}
+/* grouppost */
+.group-post-board {
+  width: 70%;
+  min-height: 150px;
+  background-color: #353535;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+}
+.left-side-gr-post img {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.gr-info-post p {
+  margin: 0;
+  font-weight: 800;
+}
+.title-gr-post {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.gr-post-date-create {
+  margin-right: 30px;
+}
+.content-gr-post p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.content-gr-post {
+  margin-left: 10px;
+  margin-right: 30px;
+}
