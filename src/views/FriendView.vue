@@ -1,30 +1,27 @@
 <template>
-  <div class="friend-view-board">
-    <menuboard />
-    <div class="friend-box">
-      <searchuserform />
-      <div class="friends-list">
-        <friendboard />
+  <mainlayout>
+    <searchuserform />
+    <div class="friends-list">
+      <friendboard />
 
-        <friendboard />
-        <friendboard />
-        <friendboard />
-        <friendboard />
-      </div>
+      <friendboard />
+      <friendboard />
+      <friendboard />
+      <friendboard />
     </div>
-  </div>
+  </mainlayout>
 </template>
 
 <script>
-import menuboard from "@/components/menuboard.vue";
+import mainlayout from "./layout/mainlayout.vue";
 import searchuserform from "@/components/friend/searchuserform.vue";
 import friendboard from "@/components/friend/friendboard.vue";
 export default {
   name: "FriendView",
   components: {
-    menuboard,
     searchuserform,
     friendboard,
+    mainlayout,
   },
 };
 </script>

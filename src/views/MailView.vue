@@ -1,25 +1,22 @@
 <template>
-  <div class="profilecontent">
-    <menuboard />
-    <div class="mailview-content">
-      <searchdialog />
-      <dialogboard />
-      <dialogboard />
-      <dialogboard />
-      <dialogboard />
-    </div>
-  </div>
+  <mainlayout>
+    <searchdialog />
+    <dialogboard />
+    <dialogboard />
+    <dialogboard />
+    <dialogboard />
+  </mainlayout>
 </template>
 <script>
-import menuboard from "../components/menuboard";
+import mainlayout from "./layout/mainlayout.vue";
 import searchdialog from "@/components/mail/searchdialog.vue";
 import dialogboard from "@/components/mail/dialogboard.vue";
 export default {
   name: "MailView",
   components: {
-    menuboard,
     searchdialog,
     dialogboard,
+    mainlayout,
   },
 };
 </script>

@@ -1,35 +1,32 @@
 <template>
-  <div class="mgAuto selection-mail-board">
-    <menuboard />
-    <div class="selection-mail-content">
-      <selectionumailinfo />
-      <div class="dialog-container">
-        <fromdialogcontainer />
-        <fromdialogcontainer />
-        <todialogcontainer />
-        <todialogcontainer />
-        <todialogcontainer />
-        <todialogcontainer />
-        <todialogcontainer />
-      </div>
-      <sendmessageform />
+  <mainlayout>
+    <selectionumailinfo />
+    <div class="dialog-container">
+      <fromdialogcontainer />
+      <fromdialogcontainer />
+      <todialogcontainer />
+      <todialogcontainer />
+      <todialogcontainer />
+      <todialogcontainer />
+      <todialogcontainer />
     </div>
-  </div>
+    <sendmessageform />
+  </mainlayout>
 </template>
 <script>
-import menuboard from "@/components/menuboard.vue";
+import mainlayout from "./layout/mainlayout.vue";
 import selectionumailinfo from "@/components/selectionmail/selectionumailinfo.vue";
-import fromdialogcontainer from "@/components/selectionmail/fromdialogcontainer";
+import fromdialogcontainer from "@/components/selectionmail/fromdialogcontainer.vue";
 import todialogcontainer from "@/components/selectionmail/todialogcontainer.vue";
 import sendmessageform from "@/components/selectionmail/sendmessageform.vue";
 export default {
   name: "SelectedMailView",
   components: {
-    menuboard,
     selectionumailinfo,
     fromdialogcontainer,
     todialogcontainer,
     sendmessageform,
+    mainlayout,
   },
 };
 </script>
