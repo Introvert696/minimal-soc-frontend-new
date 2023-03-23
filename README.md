@@ -1,6 +1,9 @@
-# minimalsocfront
+# Minimalsoc Frontend Source
+## create and update by Introvert696
 
 ## Project setup
+Для того что бы проект работал необходимо выполнить следующие действия: 
+
 ```
 npm install
 ```
@@ -19,6 +22,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
