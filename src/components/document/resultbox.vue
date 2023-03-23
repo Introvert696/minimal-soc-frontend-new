@@ -28,8 +28,8 @@
       <img
         src="@/assets/download.png"
         alt="download icon"
-        width="25"
-        height="25"
+        width="20"
+        height="20"
       />
     </div>
   </div>
