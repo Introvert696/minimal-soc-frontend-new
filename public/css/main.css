@@ -644,3 +644,69 @@ a {
 .group-info-list-board {
   margin: 15px 0 0 20px;
 }
+/* Setting css */
+.title-setting-board {
+  width: 70%;
+  height: 40px;
+  text-align: center;
+  color: white;
+  background-color: #353535;
+  margin: auto;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-top: 30px;
+}
+.title-setting-board p {
+  margin: auto;
+  padding-top: 10px;
+}
+/* setting-form */
+.setting-form {
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.setting-input {
+  width: 40%;
+  color: white;
+  margin: auto;
+  margin-top: 10px;
+}
+.setting-input input {
+  width: 90%;
+  padding-left: 5px;
+  height: 35px;
+  border: none;
+  background-color: #353535;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.setting-input label {
+  margin: 10px 0 10px 10px;
+}
+.setting-btn {
+  width: 30%;
+  margin: auto;
+  border: none;
+  margin-top: 20px;
+  height: 40px;
+  background-color: #353535;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.setting-save-btn {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: #353535;
+  color: white;
+}

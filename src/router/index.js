@@ -10,6 +10,7 @@ import SelectedMailView from "../views/SelectedMailView";
 import DocumentsView from "@/views/DocumentsView.vue";
 import GroupProfileVIew from "@/views/GroupProfileView.vue";
 import GroupViewVue from "@/views/GroupView.vue";
+import SettingView from "@/views/SettingView.vue";
 
 const routes = [
   {
@@ -85,7 +86,7 @@ const routes = [
   {
     path: "/setting",
     name: "setting",
-    component: LoginView,
+    component: SettingView,
   },
   {
     path: "/exit",
