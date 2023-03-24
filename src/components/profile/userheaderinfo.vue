@@ -2,12 +2,12 @@
   <div class="user-header-info">
     <img src="@/assets/bg-profile.png" alt="bg-user" />
     <div class="user-link">
-      <img src="@/assets/testlogo.jpg" alt="avatar" width="100" height="100" />
+      <img :src="avatar" alt="avatar" width="100" height="100" />
 
       <div class="profile-text">
         <div class="user-info">
-          <p>Kotek Kotikov</p>
-          <span>@prostoykotrek</span>
+          <p>{{ namelastname }}</p>
+          <span>@{{ username }}</span>
         </div>
         <div class="profile-nav flex">
           <div class="profile-nav-link">
@@ -33,5 +33,10 @@
 <script>
 export default {
   name: "userheaderinfo",
+  props: {
+    avatar: String,
+    namelastname: String,
+    username: String,
+  },
 };
 </script>

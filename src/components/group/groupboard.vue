@@ -2,7 +2,7 @@
   <div class="group-list-board flex">
     <div>
       <img
-        src="@/assets/testlogo.jpg"
+        :src="avatar"
         alt="group_logo"
         width="50"
         height="50"
@@ -10,8 +10,8 @@
       />
     </div>
     <div class="group-info-list-board">
-      <p>Геймстоп</p>
-      <span>20 подписчиков</span>
+      <p>{{ title }}</p>
+      <span>{{ membercount }} подписчиков</span>
     </div>
     <div class="group-list-board-delete">
       <a href="#">Отписаться</a>
@@ -21,5 +21,11 @@
 <script>
 export default {
   name: "groupboard",
+  props: {
+    avatar: String,
+    title: String,
+    membercount: Number,
+    id: Number,
+  },
 };
 </script>

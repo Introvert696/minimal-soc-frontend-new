@@ -2,7 +2,7 @@
   <div class="result-doc-box flex">
     <div class="left-result-doc-box">
       <img
-        src="@/assets/testlogo.jpg"
+        :src="userlogo"
         alt="result document logo"
         width="50"
         height="50"
@@ -11,8 +11,8 @@
     </div>
     <div class="center-result-doc-box">
       <div class="doc-title">
-        <p>Kotek Kotikov</p>
-        <span>@prostokotek</span>
+        <p>{{ namelastname }}</p>
+        <span>@{{ username }}</span>
       </div>
       <div class="doc-name flex">
         <img
@@ -21,7 +21,7 @@
           width="20"
           height="20"
         />
-        <p>document_name.txt</p>
+        <p>{{ docname }}</p>
         <img
           src="@/assets/download.png"
           alt="download icon"
@@ -41,5 +41,12 @@
 <script>
 export default {
   name: "resultbox",
+  props: {
+    id: Number,
+    userlogo: String,
+    username: String,
+    docname: String,
+    namelastname: String,
+  },
 };
 </script>

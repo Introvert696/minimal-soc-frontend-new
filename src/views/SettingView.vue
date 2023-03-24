@@ -1,6 +1,10 @@
 <template>
   <mainlayout>
-    <userheaderinfo />
+    <userheaderinfo
+      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      namelastname="Иван Филатов"
+      username="introvert696"
+    />
     <titleboard />
     <inputform />
   </mainlayout>

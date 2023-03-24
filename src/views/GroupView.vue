@@ -2,11 +2,22 @@
   <mainlayout>
     <searchgroup />
     <creategroupbtn />
-    <groupboard />
-    <groupboard />
-    <groupboard />
-    <groupboard />
-    <groupboard />
+
+    <groupboard
+      title="Unsual memes comp"
+      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      membercount="24"
+    />
+    <groupboard
+      title="Unsual memes comp"
+      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      membercount="24"
+    />
+    <groupboard
+      title="Unsual memes comp"
+      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      membercount="24"
+    />
   </mainlayout>
 </template>
 

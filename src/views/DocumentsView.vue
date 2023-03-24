@@ -1,11 +1,40 @@
 <template>
   <mainlayout class="flex">
     <searchbar />
-    <resultbox />
-    <resultbox />
-    <resultbox />
-    <resultbox />
-    <resultbox />
+    <resultbox
+      userlogo="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      namelastname="Глад Валакас"
+      username="pazhiloygibbon"
+      docname="gadza.mp3"
+    />
+
+    <resultbox
+      userlogo="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      namelastname="Глад Валакас"
+      username="pazhiloygibbon"
+      docname="gadza.mp3"
+    />
+
+    <resultbox
+      userlogo="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      namelastname="Глад Валакас"
+      username="pazhiloygibbon"
+      docname="gadza.mp3"
+    />
+
+    <resultbox
+      userlogo="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      namelastname="Глад Валакас"
+      username="pazhiloygibbon"
+      docname="gadza.mp3"
+    />
+
+    <resultbox
+      userlogo="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      namelastname="Глад Валакас"
+      username="pazhiloygibbon"
+      docname="gadza.mp3"
+    />
   </mainlayout>
 </template>
 

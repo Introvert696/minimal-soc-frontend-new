@@ -1,8 +1,8 @@
 <template>
   <div class="friend-board">
-    <img src="@/assets/testlogo.jpg" alt="#" width="50" height="50" />
+    <img :src="avatar" alt="#" width="50" height="50" />
     <div class="friend-board-text">
-      <p>Алексей Рыбов</p>
+      <p>{{ namelastname }}</p>
       <a href="#">Написать сообщение</a>
     </div>
     <div class="friend-board-delete">
@@ -14,5 +14,10 @@
 <script>
 export default {
   name: "friendboard",
+  props: {
+    namelastname: String,
+    avatar: String,
+    id: Number,
+  },
 };
 </script>

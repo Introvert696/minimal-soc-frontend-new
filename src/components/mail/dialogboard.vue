@@ -1,9 +1,9 @@
 <template>
   <div class="dialog-board">
-    <img src="@/assets/testlogo.jpg" alt="user photo" width="50" height="50" />
+    <img :src="avatar" alt="user photo" width="50" height="50" />
     <div class="text-dialog-board">
-      <p>Alexey Rybakov</p>
-      <span>Как дела что деаешь?:</span>
+      <p>{{ namelastname }}</p>
+      <span>{{ message }}</span>
     </div>
     <div class="dialog-board-delete">
       <a href="#">Удалить</a>
@@ -13,6 +13,6 @@
 <script>
 export default {
   name: "dialogboard",
-  props: ["name", "lastname", "message", "img"],
+  props: ["namelastname", "message", "avatar", "id"],
 };
 </script>

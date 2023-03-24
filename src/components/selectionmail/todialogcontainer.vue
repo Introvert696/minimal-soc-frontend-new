@@ -2,23 +2,20 @@
   <div class="user-dialog-board">
     <div class="user-dialog-message">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-        repellendus quod maiores repudiandae, dolor inventore voluptatibus
-        aliquam vel ullam mollitia placeat voluptates fuga nulla rem dicta! Illo
-        ab sunt pariatur?
+        {{ content }}
       </p>
     </div>
     <div class="user-dialog-info">
       <img
-        src="@/assets/testlogo.jpg"
+        :src="avatar"
         alt="userAve"
         width="60"
         height="60"
         style="border-radius: 100px"
       />
       <p>
-        Котек <br />
-        Котеков
+        {{ name }} <br />
+        {{ lastname }}
       </p>
     </div>
   </div>
@@ -27,5 +24,11 @@
 <script>
 export default {
   name: "todialogcontainer",
+  props: {
+    content: String,
+    avatar: String,
+    name: String,
+    lastname: String,
+  },
 };
 </script>

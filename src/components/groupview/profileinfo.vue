@@ -2,7 +2,7 @@
   <div class="gr-board flex">
     <div class="left-gr-side">
       <img
-        src="@/assets/testlogo.jpg"
+        :src="avatar"
         alt="gr_photo"
         width="100"
         height="100"
@@ -11,12 +11,12 @@
     </div>
     <div class="right-gr-side">
       <div class="title-gr-board">
-        <p>Игровой мирок стопгейма</p>
-        <span>Мы обсуждаем игры</span>
+        <p>{{ title }}</p>
+        <span>{{ desk }}</span>
       </div>
       <div class="link-gr-board flex">
         <a href="#">Подписаться</a>
-        <p>Подписчики: 20000</p>
+        <p>Подписчики: {{ membercount }}</p>
       </div>
     </div>
   </div>
@@ -25,5 +25,12 @@
 <script>
 export default {
   name: "profileinfo",
+  props: {
+    avatar: String,
+    title: String,
+    desk: String,
+    membercount: Number,
+    id: Number,
+  },
 };
 </script>

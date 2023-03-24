@@ -2,11 +2,11 @@
   <form action="#" class="setting-form">
     <div class="setting-input">
       <label for="name">Имя:</label><br />
-      <input type="text" name="name" />
+      <input type="text" name="name" :value="name" />
     </div>
     <div class="setting-input">
       <label for="login">Логин:</label><br />
-      <input type="text" name="login" />
+      <input type="text" name="login" :value="username" />
     </div>
     <div class="setting-input">
       <label for="latname">Фамилия:</label><br />
@@ -14,7 +14,7 @@
     </div>
     <div class="setting-input">
       <label for="name">Дата рождения:</label><br />
-      <input type="date" name="name" />
+      <input type="date" name="name" :value="datecreate" />
     </div>
     <div class="setting-input">
       <label for="password">Пароль:</label><br />
@@ -32,5 +32,11 @@
 <script>
 export default {
   name: "inputform",
+  props: {
+    name: String,
+    lastname: String,
+    username: String,
+    datecreate: Date,
+  },
 };
 </script>

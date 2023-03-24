@@ -7,54 +7,47 @@
         namelastname="Kotek Kotekov"
         login="kotekprostoy"
         date="14:23 12.02.2023"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
       />
+
       <post
         content="Hello its my first test"
         namelastname="Kotek Kotekov"
         login="kotekprostoy"
         date="14:23 12.02.2023"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
       />
+
       <post
         content="Hello its my first test"
         namelastname="Kotek Kotekov"
         login="kotekprostoy"
         date="14:23 12.02.2023"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
       />
+
       <post
         content="Hello its my first test"
         namelastname="Kotek Kotekov"
         login="kotekprostoy"
         date="14:23 12.02.2023"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
       />
+
       <post
         content="Hello its my first test"
         namelastname="Kotek Kotekov"
         login="kotekprostoy"
         date="14:23 12.02.2023"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
       />
+
       <post
         content="Hello its my first test"
         namelastname="Kotek Kotekov"
         login="kotekprostoy"
         date="14:23 12.02.2023"
-      />
-      <post
-        content="Hello its my first test"
-        namelastname="Kotek Kotekov"
-        login="kotekprostoy"
-        date="14:23 12.02.2023"
-      />
-      <post
-        content="Hello its my first test"
-        namelastname="Kotek Kotekov"
-        login="kotekprostoy"
-        date="14:23 12.02.2023"
-      />
-      <post
-        content="Hello its my first test"
-        namelastname="Kotek Kotekov"
-        login="kotekprostoy"
-        date="14:23 12.02.2023"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
       />
     </div>
   </mainlayout>

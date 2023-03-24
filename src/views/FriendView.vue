@@ -2,12 +2,22 @@
   <mainlayout>
     <searchuserform />
     <div class="friends-list">
-      <friendboard />
-
-      <friendboard />
-      <friendboard />
-      <friendboard />
-      <friendboard />
+      <friendboard
+        namelastname="Иван Филатов"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      />
+      <friendboard
+        namelastname="Иван Филатов"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      />
+      <friendboard
+        namelastname="Иван Филатов"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      />
+      <friendboard
+        namelastname="Иван Филатов"
+        avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
+      />
     </div>
   </mainlayout>
 </template>

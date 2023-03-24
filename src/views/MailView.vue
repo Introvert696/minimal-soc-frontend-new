@@ -1,10 +1,31 @@
 <template>
   <mainlayout>
     <searchdialog />
-    <dialogboard />
-    <dialogboard />
-    <dialogboard />
-    <dialogboard />
+    <dialogboard
+      avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
+      namelastname="Алексей Пушкин"
+      message="Как дела у тебя?"
+    />
+    <dialogboard
+      avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
+      namelastname="Алексей Пушкин"
+      message="Как дела у тебя?"
+    />
+    <dialogboard
+      avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
+      namelastname="Алексей Пушкин"
+      message="Как дела у тебя?"
+    />
+    <dialogboard
+      avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
+      namelastname="Алексей Пушкин"
+      message="Как дела у тебя?"
+    />
+    <dialogboard
+      avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
+      namelastname="Алексей Пушкин"
+      message="Как дела у тебя?"
+    />
   </mainlayout>
 </template>
 <script>

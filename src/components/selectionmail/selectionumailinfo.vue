@@ -2,7 +2,7 @@
   <div class="selection-mail-header">
     <div class="selection-mail-header-img">
       <img
-        src="@/assets/testlogo.jpg"
+        :src="avatar"
         alt="userimg"
         width="30"
         height="30"
@@ -10,7 +10,7 @@
       />
     </div>
     <div class="selection-mail-header-title">
-      <p>Диалог с Егором Понамаревым</p>
+      <p>Диалог с {{ namelastname }}</p>
     </div>
     <div class="selection-mail-header-menu">
       <p>...</p>
@@ -20,5 +20,9 @@
 <script>
 export default {
   name: "selectionumailinfo",
+  props: {
+    avatar: String,
+    namelastname: String,
+  },
 };
 </script>
