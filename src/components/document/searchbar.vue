@@ -1,7 +1,7 @@
 <template>
   <div class="search-document">
     <form action="#" class="flex">
-      <input type="text" />
+      <input type="text" placeholder="Введите название документа..." />
       <button>Найти</button>
     </form>
   </div>

@@ -5,6 +5,9 @@
       <p>Alexey Rybakov</p>
       <span>Как дела что деаешь?:</span>
     </div>
+    <div class="dialog-board-delete">
+      <a href="#">Удалить</a>
+    </div>
   </div>
 </template>
 <script>

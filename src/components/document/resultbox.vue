@@ -22,15 +22,18 @@
           height="20"
         />
         <p>document_name.txt</p>
+        <img
+          src="@/assets/download.png"
+          alt="download icon"
+          width="20"
+          height="20"
+          style="margin-left: 20%"
+        />
       </div>
     </div>
-    <div class="right-result-doc-box">
-      <img
-        src="@/assets/download.png"
-        alt="download icon"
-        width="20"
-        height="20"
-      />
+
+    <div class="doc-delete">
+      <a href="#">Удалить</a>
     </div>
   </div>
 </template>

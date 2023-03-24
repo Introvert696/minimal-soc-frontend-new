@@ -10,6 +10,7 @@
       </div>
       <div class="post-board-header-user-info-date">
         <p>{{ date }}</p>
+        <a href="#">Удалить</a>
       </div>
     </div>
     <div class="post-board-content">

@@ -1,5 +1,5 @@
 <template>
-  <div class="input-login test-border">
+  <div class="input-login">
     <input :type="type" :name="name" :placeholder="placeholder" />
   </div>
 </template>

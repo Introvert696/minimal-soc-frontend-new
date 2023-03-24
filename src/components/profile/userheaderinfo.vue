@@ -11,19 +11,19 @@
         </div>
         <div class="profile-nav flex">
           <div class="profile-nav-link">
-            <a href="#">Лента</a>
+            <a href="/feed">Лента</a>
           </div>
           <div class="profile-nav-link">
-            <a href="#">Друзья</a>
+            <a href="/friend">Друзья</a>
           </div>
           <div class="profile-nav-link">
-            <a href="#">Группы</a>
+            <a href="/group">Группы</a>
           </div>
           <div class="profile-nav-link">
-            <a href="#">Настройки</a>
+            <a href="/setting">Настройки</a>
           </div>
           <div class="profile-nav-link">
-            <a href="#">Выход</a>
+            <a href="/exit">Выход</a>
           </div>
         </div>
       </div>

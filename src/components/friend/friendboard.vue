@@ -5,6 +5,9 @@
       <p>Алексей Рыбов</p>
       <a href="#">Написать сообщение</a>
     </div>
+    <div class="friend-board-delete">
+      <a href="#">Удалить</a>
+    </div>
   </div>
 </template>
 

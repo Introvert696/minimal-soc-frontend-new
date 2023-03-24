@@ -4,7 +4,7 @@
     <logininput type="text" name="email" placeholder="email" />
     <logininput type="password" name="password" placeholder="password" />
     <btnlogin />
-    <downbuttonlink text="can you need register?" link="http://vk.com" />
+    <downbuttonlink text="can you need register?" link="/register" />
   </form>
 </template>
 

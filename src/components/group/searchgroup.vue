@@ -1,6 +1,6 @@
 <template>
   <form action="#" class="search-group-form flex">
-    <input type="text" />
+    <input type="text" placeholder="Введите название группы..." />
     <button>Найти...</button>
   </form>
 </template>

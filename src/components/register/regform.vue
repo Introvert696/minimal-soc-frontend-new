@@ -8,7 +8,7 @@
     <reginput type="password" name="password" placeholder="password" />
     <reginput type="password" name="pass-again" placeholder="password again" />
     <btnregister />
-    <loginlink link="http://vk.com" text="maybe login?" />
+    <loginlink link="/login" text="maybe login?" />
   </form>
 </template>
 <script>

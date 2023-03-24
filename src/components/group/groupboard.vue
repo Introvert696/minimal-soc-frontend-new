@@ -13,6 +13,9 @@
       <p>Геймстоп</p>
       <span>20 подписчиков</span>
     </div>
+    <div class="group-list-board-delete">
+      <a href="#">Отписаться</a>
+    </div>
   </div>
 </template>
 <script>
