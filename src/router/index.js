@@ -11,6 +11,7 @@ import DocumentsView from "@/views/DocumentsView.vue";
 import GroupProfileVIew from "@/views/GroupProfileView.vue";
 import GroupViewVue from "@/views/GroupView.vue";
 import SettingView from "@/views/SettingView.vue";
+import UserProfileView from "@/views/UserProfileView.vue";
 
 const routes = [
   {
@@ -41,22 +42,17 @@ const routes = [
   {
     path: "/profile/:id",
     name: "getProfile",
-    component: LoginView,
+    component: UserProfileView,
   },
   {
     path: "/profile/edit",
     name: "editProfile",
-    component: LoginView,
+    component: SettingView,
   },
   {
     path: "/feed",
     name: "feed",
     component: FeedView,
-  },
-  {
-    path: "/post/:id",
-    name: "selectPost",
-    component: LoginView,
   },
   {
     path: "/mail",
