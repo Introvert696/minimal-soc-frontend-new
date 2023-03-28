@@ -1,6 +1,9 @@
 <template>
   <div class="user-header-info">
-    <img src="@/assets/bg-profile.png" alt="bg-user" />
+    <img
+      src="https://sun9-47.userapi.com/impg/CnjigHEidpPmQ9w5CdVDMahR1vO_SJkaJ5IfOg/-3EMhmE3tMs.jpg?size=720x234&quality=95&sign=430a684bd5a9d51b11fd5389db1fbbe8&type=album"
+      alt="bg-user"
+    />
     <div class="user-link">
       <img :src="avatar" alt="avatar" width="100" height="100" />
 

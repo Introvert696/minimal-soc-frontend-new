@@ -24,8 +24,22 @@
       <label for="password2">Повторите пароль:</label><br />
       <input type="password" name="password2" />
     </div>
-    <button class="setting-btn">Изменить аватарку</button> <br />
-    <button class="setting-btn">Изменить фон профиля</button>
+    <div class="setting-btn">
+      <input type="file" name="file" id="input_file" />
+      <label for="input_file" class="setting-img-btn">
+        <span>Выбрать изображение</span>
+      </label>
+    </div>
+    <br />
+
+    <div class="setting-btn">
+      <input type="file" name="bg" id="bg" />
+      <label for="bg" class="setting-img-btn">
+        <span>Выбрать фон профиля</span>
+      </label>
+    </div>
+    <br />
+
     <button type="submit" class="setting-save-btn">Сохранить</button>
   </form>
 </template>

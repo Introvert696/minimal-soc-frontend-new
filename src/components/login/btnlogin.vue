@@ -1,6 +1,6 @@
 <template>
   <div class="login-btn">
-    <input type="submit" class="" value="Login" />
+    <input type="submit" class="" value="Войти" />
   </div>
 </template>
 

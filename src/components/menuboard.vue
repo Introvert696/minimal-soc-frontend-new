@@ -47,7 +47,7 @@
           height="15"
         />
       </div>
-      <div class="link">
+      <!-- <div class="link">
         <a href="/document">Документы</a>
         <img
           src="@/assets/002-google-docs.png"
@@ -55,7 +55,7 @@
           width="15"
           height="15"
         />
-      </div>
+      </div> -->
       <div class="link">
         <a href="/setting">Настройки</a>
         <img

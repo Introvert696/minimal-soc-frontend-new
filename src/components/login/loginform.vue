@@ -1,10 +1,10 @@
 <template>
   <form class="board login-board">
     <logo />
-    <logininput type="text" name="email" placeholder="email" />
-    <logininput type="password" name="password" placeholder="password" />
+    <logininput type="text" name="email" placeholder="Почта" />
+    <logininput type="password" name="password" placeholder="Пароль" />
     <btnlogin />
-    <downbuttonlink text="can you need register?" link="/register" />
+    <downbuttonlink text="Нету аккаунта?" link="/register" />
   </form>
 </template>
 

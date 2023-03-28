@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <p>MINIMALSOC</p>
-    <span>твоя минимальная сеть</span>
+    <span>твоя минималистичная сеть</span>
   </div>
 </template>
 
