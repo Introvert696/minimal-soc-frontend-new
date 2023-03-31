@@ -1,9 +1,19 @@
 <template>
-  <form class="board login-board">
+  <form class="board login-board" @submit.prevent>
     <logo />
-    <logininput type="text" name="email" placeholder="Почта" />
-    <logininput type="password" name="password" placeholder="Пароль" />
-    <btnlogin />
+    <logininput
+      type="text"
+      name="email"
+      placeholder="Почта"
+      @inputField="setLogin"
+    />
+    <logininput
+      type="password"
+      name="password"
+      placeholder="Пароль"
+      @inputField="setPassword"
+    />
+    <btnlogin @Login="login" />
     <downbuttonlink text="Нету аккаунта?" link="/register" />
   </form>
 </template>
@@ -21,6 +31,18 @@ export default {
     logo,
     btnlogin,
     downbuttonlink,
+  },
+
+  methods: {
+    setLogin(inputValue) {
+      this.$emit("inputLogin", inputValue);
+    },
+    setPassword(inputValue) {
+      this.$emit("inputPassword", inputValue);
+    },
+    login() {
+      this.$emit("Login");
+    },
   },
 };
 </script>
