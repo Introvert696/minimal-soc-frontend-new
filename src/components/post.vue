@@ -58,6 +58,7 @@ export default {
         .then((response) => {
           console.log(response);
           this.$emit("deleted");
+          this.$router.go(0);
         });
     },
   },
