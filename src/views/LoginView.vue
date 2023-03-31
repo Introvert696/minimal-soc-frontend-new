@@ -40,6 +40,7 @@ export default {
           })
           .then((response) => {
             localStorage.token = response.data.access_token;
+            localStorage.id = response.data.user.id;
             this.$router.push("/feed");
           });
       }

@@ -5,13 +5,16 @@
       <post
         v-for="post in posts"
         :key="post.post"
+        :id="post.post.id"
         :content="post.post.content"
         :namelastname="
           post.post.creator.name + ' ' + post.post.creator.lastname
         "
+        :creater="post.post.creater"
         :login="post.post.creator.login"
-        :date="post.post.created_at"
+        :date="formatDate(post.post.created_at)"
         :avatar="post.post.creator.user_photo"
+        :delete="grabPost"
       />
     </div>
   </mainlayout>
@@ -57,14 +60,24 @@ export default {
           }
         });
     },
+    formatDate(date) {
+      const newDate = new Date(date);
+      const day = newDate.getDate();
+      const month = newDate.getMonth() + 1;
+      const year = newDate.getFullYear();
+      const hours = newDate.getHours();
+      const minutes = newDate.getMinutes();
+      const seconds = newDate.getSeconds();
+      return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
+    },
   },
   mounted() {
     if (typeof localStorage.token != "undefined") {
       console.log("User Has token, try to grab info");
+      this.grabPost();
     } else {
       console.log("Not Loggin, Redirect to login");
     }
-    this.grabPost();
   },
 };
 </script>
