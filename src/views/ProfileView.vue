@@ -57,6 +57,7 @@ export default {
           console.log(response.data);
           this.userinfo = response.data.user;
           this.posts = response.data.posts;
+          this.posts.reverse();
         })
         .catch(() => {
           router.push("/login");

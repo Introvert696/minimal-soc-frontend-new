@@ -1,8 +1,8 @@
 <template>
   <div class="user-header-info">
-    <img :src="bg_image" alt="bg-user" />
+    <img :src="getImage(bg_image)" alt="bg-user" />
     <div class="user-link">
-      <img :src="avatar" alt="avatar" width="100" height="100" />
+      <img :src="getImage(avatar)" alt="avatar" width="100" height="100" />
 
       <div class="profile-text">
         <div class="user-info">
@@ -31,6 +31,7 @@
   </div>
 </template>
 <script>
+import globals from "@/globals";
 export default {
   name: "userheaderinfo",
   props: {
@@ -38,6 +39,12 @@ export default {
     namelastname: String,
     username: String,
     bg_image: String,
+  },
+  methods: {
+    getImage(image) {
+      var imagestring = globals.API_URL + "image/" + image;
+      return imagestring;
+    },
   },
 };
 </script>

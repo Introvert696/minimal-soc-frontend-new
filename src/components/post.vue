@@ -2,7 +2,7 @@
   <div class="post-board">
     <div class="post-board-header">
       <div class="post-board-header-user-info flex">
-        <img :src="avatar" alt="#" width="50" height="50" />
+        <img :src="getImage(avatar)" alt="#" width="50" height="50" />
         <div class="post-board-header-user-info-title">
           <p>{{ namelastname }}</p>
           <span>@{{ login }}</span>
@@ -60,6 +60,10 @@ export default {
           this.$emit("deleted");
           this.$router.go(0);
         });
+    },
+    getImage(image) {
+      var imagestring = globals.API_URL + "image/" + image;
+      return imagestring;
     },
   },
 };
