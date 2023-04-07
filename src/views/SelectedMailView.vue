@@ -1,44 +1,36 @@
 <template>
   <mainlayout>
     <selectionumailinfo
-      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
-      namelastname="Иван Филатов"
+      :avatar="getImage(user.user_photo)"
+      namelastname="пользователем"
     />
     <div class="dialog-container">
-      <fromdialogcontainer
-        avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
-        name="Иван"
-        lastname="Филатов"
-        content="Привет как дела?"
-      />
+      <div v-for="mes in messages" :key="mes">
+        <fromdialogcontainer
+          v-if="mes.from == user.id"
+          :avatar="getImage(user.user_photo)"
+          :name="user.name"
+          :lastname="user.lastname"
+          :content="mes.content"
+        />
 
-      <fromdialogcontainer
-        avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
-        name="Иван"
-        lastname="Филатов"
-        content="Чем занимаешься?"
-      />
+        <todialogcontainer
+          v-if="mes.from != user.id"
+          :avatar="getImage(groupinfo.seconduser.user_photo)"
+          :name="groupinfo.seconduser.name"
+          :lastname="groupinfo.seconduser.lastname"
+          :content="mes.content"
+        />
 
-      <todialogcontainer
-        avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
-        name="Алена"
-        lastname="Киркорова"
-        content="Привет, хорошо"
-      />
-      <todialogcontainer
-        avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
-        name="Алена"
-        lastname="Киркорова"
-        content="у тебя как?"
-      />
-      <todialogcontainer
-        avatar="https://www.meme-arsenal.com/memes/a2c725c61ba1d3aacd43906785171756.jpg"
-        name="Алена"
-        lastname="Киркорова"
-        content="Чем занимаешься?"
-      />
+        >
+      </div>
     </div>
-    <sendmessageform />
+    <sendmessageform
+      :to="
+        groupinfo.first_user == user.id ? groupinfo.second_user : groupinfo.from
+      "
+      :message_group="groupinfo.id"
+    />
   </mainlayout>
 </template>
 <script>
@@ -47,6 +39,9 @@ import selectionumailinfo from "@/components/selectionmail/selectionumailinfo.vu
 import fromdialogcontainer from "@/components/selectionmail/fromdialogcontainer.vue";
 import todialogcontainer from "@/components/selectionmail/todialogcontainer.vue";
 import sendmessageform from "@/components/selectionmail/sendmessageform.vue";
+import axios from "axios";
+import globals from "@/globals";
+import router from "@/router";
 export default {
   name: "SelectedMailView",
   components: {
@@ -55,6 +50,59 @@ export default {
     todialogcontainer,
     sendmessageform,
     mainlayout,
+  },
+  data() {
+    return {
+      user: {},
+      second_user: {},
+      messages: [],
+      groupinfo: {},
+    };
+  },
+  methods: {
+    getProfileInfo() {
+      axios
+        .get(globals.API_URL + "userprofile", {
+          headers: {
+            Authorization: `Bearer ${localStorage.token}`,
+          },
+        })
+        .then((resp) => {
+          //console.log(resp.data);
+          this.user = resp.data;
+        })
+        .catch((er) => {
+          // router.push("/login");
+          console.log(er);
+        });
+    },
+    getMessages() {
+      console.log();
+      axios
+        .get(globals.API_URL + "messages_groups/" + this.$route.params.id, {
+          headers: {
+            Authorization: `Bearer ${localStorage.token}`,
+          },
+        })
+        .then((el) => {
+          //console.log(el.data.messages);
+          this.messages = el.data.messages;
+          this.groupinfo = el.data;
+        })
+        .catch((er) => {
+          if (er.response.status == 401) {
+            router.push("/login");
+          }
+        });
+    },
+
+    getImage(image) {
+      return globals.API_URL + "image/" + image;
+    },
+  },
+  mounted() {
+    this.getProfileInfo();
+    this.getMessages();
   },
 };
 </script>

@@ -1,11 +1,41 @@
 <template>
-  <form action="#" class="send-message-form">
-    <input type="text" placeholder="Введите сообщение ..." />
-    <button type="submit">Отправить</button>
+  <form action="#" class="send-message-form" @submit.prevent>
+    <input v-model="content" type="text" placeholder="Введите сообщение ..." />
+    <button @click="sendMessage" type="submit">Отправить</button>
   </form>
 </template>
 <script>
+import axios from "axios";
+import globals from "@/globals";
 export default {
   name: "sendmessageform",
+  props: ["to", "message_group"],
+  data() {
+    return {
+      content: "",
+    };
+  },
+  methods: {
+    sendMessage() {
+      axios
+        .post(
+          globals.API_URL + "messages",
+          {
+            to: this.to,
+            message_group: this.message_group,
+            content: this.content,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.token}`,
+            },
+          }
+        )
+        .then((resp) => {
+          console.log(resp);
+          this.$router.go(0);
+        });
+    },
+  },
 };
 </script>
