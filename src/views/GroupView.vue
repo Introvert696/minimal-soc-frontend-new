@@ -4,19 +4,11 @@
     <creategroupbtn />
 
     <groupboard
-      title="Unsual memes comp"
-      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
-      membercount="24"
-    />
-    <groupboard
-      title="Unsual memes comp"
-      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
-      membercount="24"
-    />
-    <groupboard
-      title="Unsual memes comp"
-      avatar="https://oir.mobi/uploads/posts/2021-04/1619695857_9-oir_mobi-p-glad-valakas-krolik-zhivotnie-krasivo-foto-9.jpg"
-      membercount="24"
+      v-for="g in groups"
+      :key="g.group"
+      :title="g.group.title"
+      :avatar="getImage(g.group.photo)"
+      :id="g.id"
     />
   </mainlayout>
 </template>
@@ -26,6 +18,8 @@ import mainlayout from "./layout/mainlayout.vue";
 import searchgroup from "@/components/group/searchgroup.vue";
 import groupboard from "@/components/group/groupboard.vue";
 import creategroupbtn from "@/components/group/creategroupbtn.vue";
+import axios from "axios";
+import globals from "@/globals";
 export default {
   name: "GroupView",
   components: {
@@ -33,6 +27,30 @@ export default {
     searchgroup,
     groupboard,
     creategroupbtn,
+  },
+  data() {
+    return {
+      groups: [],
+    };
+  },
+  methods: {
+    getSubGroup() {
+      axios
+        .get(globals.API_URL + "subscribe_to_groups", {
+          headers: {
+            Authorization: `Bearer ${localStorage.token}`,
+          },
+        })
+        .then((resp) => {
+          this.groups = resp.data;
+        });
+    },
+    getImage(rawlink) {
+      return globals.API_URL + "image/" + rawlink;
+    },
+  },
+  mounted() {
+    this.getSubGroup();
   },
 };
 </script>
