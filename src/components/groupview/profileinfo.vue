@@ -15,8 +15,8 @@
         <span>{{ desk }}</span>
       </div>
       <div class="link-gr-board flex">
-        <a href="#">Подписаться</a>
-        <p>Подписчики: {{ membercount }}</p>
+        <a href="#" v-if="is_sub == false">Подписаться</a>
+        <!-- <p>Подписчики: {{ membercount }}</p> -->
       </div>
     </div>
   </div>
@@ -29,8 +29,9 @@ export default {
     avatar: String,
     title: String,
     desk: String,
-    membercount: Number,
-    id: Number,
+    membercount: String,
+    id: String,
+    is_sub: Boolean,
   },
 };
 </script>

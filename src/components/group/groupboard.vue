@@ -30,10 +30,11 @@ export default {
     title: String,
     membercount: Number,
     id: Number,
+    groupId: Number,
   },
   methods: {
     openGroup() {
-      router.push("/group/" + this.id);
+      router.push("/group/" + this.groupId);
     },
     deleteGroup() {
       axios

@@ -9,6 +9,7 @@
       :title="g.group.title"
       :avatar="getImage(g.group.photo)"
       :id="g.id"
+      :groupId="g.group.id"
     />
   </mainlayout>
 </template>

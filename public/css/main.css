@@ -581,14 +581,16 @@ a {
 /* grouppost */
 .group-post-board {
   width: 70%;
-  min-height: 150px;
+
   background-color: #353535;
   margin: auto;
   margin-top: 30px;
   border-radius: 10px;
   color: white;
   font-size: 12px;
+  justify-content: left;
 }
+
 .left-side-gr-post img {
   margin-left: 20px;
   margin-top: 15px;
@@ -601,8 +603,12 @@ a {
   margin-top: 20px;
   margin-left: 10px;
 }
+.center-gr-post {
+  width: 90%;
+}
 .gr-post-date-create {
   margin-right: 30px;
+  text-align: right;
 }
 .content-gr-post p {
   margin: 0;
