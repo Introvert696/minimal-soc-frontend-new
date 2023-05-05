@@ -7,11 +7,13 @@
           v-if="fr.first_user != id"
           :namelastname="fr.firstuser.name + ' ' + fr.firstuser.lastname"
           :avatar="getPhotoUrl(fr.firstuser.user_photo)"
+          :id="fr.firstuser.id"
         />
         <friendboard
           v-if="fr.second_user != id"
           :namelastname="fr.seconduser.name + ' ' + fr.seconduser.lastname"
           :avatar="getPhotoUrl(fr.seconduser.user_photo)"
+          :id="fr.seconduser.id"
         />
       </div>
     </div>

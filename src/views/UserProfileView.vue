@@ -5,27 +5,7 @@
       username="introvert696"
       avatar="https://www.meme-arsenal.com/memes/642f350f7bca2c3c3d0d079953ed5f12.jpg"
     />
-    <post
-      avatar="https://www.meme-arsenal.com/memes/642f350f7bca2c3c3d0d079953ed5f12.jpg"
-      content="Я пожилой гиббон"
-      namelastname="Иван Филатов"
-      login="introvert696"
-      date="16:43 12.03.2023"
-    />
-    <post
-      avatar="https://www.meme-arsenal.com/memes/642f350f7bca2c3c3d0d079953ed5f12.jpg"
-      content="Я пожилой гиббон"
-      namelastname="Иван Филатов"
-      login="introvert696"
-      date="16:43 12.03.2023"
-    />
-    <post
-      avatar="https://www.meme-arsenal.com/memes/642f350f7bca2c3c3d0d079953ed5f12.jpg"
-      content="Я пожилой гиббон"
-      namelastname="Иван Филатов"
-      login="introvert696"
-      date="16:43 12.03.2023"
-    />
+
     <post
       avatar="https://www.meme-arsenal.com/memes/642f350f7bca2c3c3d0d079953ed5f12.jpg"
       content="Я пожилой гиббон"
@@ -45,6 +25,12 @@ export default {
     mainlayout,
     headerinfo,
     post,
+  },
+  methods: {
+    getUserInfo() {},
+  },
+  mounted() {
+    this.getUserInfo();
   },
 };
 </script>

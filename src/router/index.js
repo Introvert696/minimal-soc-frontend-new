@@ -17,71 +17,113 @@ const routes = [
   {
     path: "/",
     name: "home",
+    meta: {
+      title: "Вход",
+    },
     component: LoginView,
   },
   {
     path: "/friend",
     name: "friend",
+    meta: {
+      title: "Друзья",
+    },
     component: FriendView,
   },
   {
     path: "/login",
     name: "login",
+    meta: {
+      title: "Вход",
+    },
     component: LoginView,
   },
   {
     path: "/register",
     name: "register",
+    meta: {
+      title: "Регистрация",
+    },
     component: RegisterView,
   },
   {
     path: "/profile",
     name: "profile",
+    meta: {
+      title: "Мой профиль",
+    },
     component: ProfileView,
   },
   {
     path: "/profile/:id",
     name: "getProfile",
+    meta: {
+      title: "Профиль пользователя",
+    },
     component: UserProfileView,
   },
   {
     path: "/profile/edit",
     name: "editProfile",
+    meta: {
+      title: "Настройка",
+    },
     component: SettingView,
   },
   {
     path: "/feed",
     name: "feed",
+    meta: {
+      title: "Лента",
+    },
     component: FeedView,
   },
   {
     path: "/mail",
     name: "mail",
+    meta: {
+      title: "Почта",
+    },
     component: MailView,
   },
   {
     path: "/mail/:id",
     name: "selectedMail",
+    meta: {
+      title: "Диалог",
+    },
     component: SelectedMailView,
   },
   {
     path: "/document",
     name: "document",
+    meta: {
+      title: "Документы",
+    },
     component: DocumentsView,
   },
   {
     path: "/group",
     name: "group",
+    meta: {
+      title: "Группы",
+    },
     component: GroupViewVue,
   },
   {
     path: "/group/:id",
     name: "selectedGroup",
+    meta: {
+      title: "Группа",
+    },
     component: GroupProfileVIew,
   },
   {
     path: "/setting",
     name: "setting",
+    meta: {
+      title: "Настройки",
+    },
     component: SettingView,
   },
   {
@@ -99,6 +141,11 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+router.beforeEach((to, from, next) => {
+  console.log(to);
+  document.title = to.meta.title;
+  next();
 });
 
 export default router;

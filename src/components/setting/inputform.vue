@@ -25,7 +25,7 @@
       <input type="password" name="password2" />
     </div>
     <div class="setting-btn">
-      <input type="file" name="file" id="input_file" @input="setUserPhoto" />
+      <input type="file" name="file" id="input_file" @change="setUserPhoto" />
       <label for="input_file" class="setting-img-btn">
         <span>Выбрать изображение</span>
       </label>
@@ -33,7 +33,7 @@
     <br />
 
     <div class="setting-btn">
-      <input type="file" name="bg" id="bg" @input="setUserBG" />
+      <input type="file" name="bg" id="bg" @change="setUserBG" />
       <label for="bg" class="setting-img-btn">
         <span>Выбрать фон профиля</span>
       </label>
@@ -46,6 +46,7 @@
 <script>
 import axios from "axios";
 import globals from "@/globals";
+import router from "@/router";
 export default {
   name: "inputform",
   data() {
@@ -63,30 +64,36 @@ export default {
   methods: {
     updateInfo() {
       var updateData = new FormData();
-      updateData.append("photo_user", this.input_user_photo);
-      console.log(localStorage.token);
+      updateData.append("user_photo", this.input_user_photo);
+      updateData.append("name", this.input_name);
+      updateData.append("lastname", this.input_lastname);
+      updateData.append("bg_image", this.input_bg_photo);
+      updateData.append("birthday", this.input_datecreate);
+      updateData.append("login", this.input_login);
+      updateData.append("password", this.input_password);
+      axios.defaults.headers.common[
+        "Authorization"
+      ] = `Bearer ${localStorage.token}`;
       axios
         .post(
-          globals.API_URL + "users/" + localStorage.id + "?_method=PUT",
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.token}`,
-            },
-          },
+          globals.API_URL + "users/" + localStorage.id + "?_method=PATCH",
           updateData
         )
         .then((resp) => {
           console.log(resp);
+          router.go(0);
         })
         .catch((resp) => {
           console.log(resp);
         });
     },
     setUserPhoto(file) {
-      this.input_user_photo = file;
+      this.input_user_photo = file.target.files[0];
+      //console.log(this.input_user_photo);
     },
     setUserBG(file) {
-      this.input_bg_photo = file;
+      this.input_bg_photo = file.target.files[0];
+      console.log(file);
     },
   },
   mounted() {},

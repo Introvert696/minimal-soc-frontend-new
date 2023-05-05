@@ -358,6 +358,7 @@ a {
 }
 .friend-board-text {
   margin-left: 20px;
+  cursor: pointer;
   margin-top: 5px;
 }
 .friend-board-text p {
