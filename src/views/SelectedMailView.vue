@@ -21,13 +21,13 @@
           :lastname="groupinfo.seconduser.lastname"
           :content="mes.content"
         />
-
-        >
       </div>
     </div>
     <sendmessageform
       :to="
-        groupinfo.first_user == user.id ? groupinfo.second_user : groupinfo.from
+        groupinfo.first_user == user.id
+          ? groupinfo.second_user
+          : groupinfo.first_user
       "
       :message_group="groupinfo.id"
     />
@@ -103,6 +103,16 @@ export default {
   mounted() {
     this.getProfileInfo();
     this.getMessages();
+    globals.wsServer.onmessage = function (ev) {
+      console.log(JSON.parse(ev.data));
+      var resp = JSON.parse(ev.data);
+      if (resp.type == "message") {
+        //если пришло новое сообщение
+        // тут думаю сделать запрос на выборку сообщений заново
+        // типо динамически работают
+        router.go(0);
+      }
+    };
   },
 };
 </script>

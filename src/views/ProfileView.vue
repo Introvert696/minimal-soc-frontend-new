@@ -54,7 +54,7 @@ export default {
           },
         })
         .then((response) => {
-          console.log(response.data);
+          //console.log(response.data);
           this.userinfo = response.data.user;
           this.posts = response.data.posts;
           this.posts.reverse();

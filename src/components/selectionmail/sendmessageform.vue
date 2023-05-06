@@ -33,8 +33,27 @@ export default {
         )
         .then((resp) => {
           console.log(resp);
-          this.$router.go(0);
+          //Тестовое сообщение
+          let sendMessage = {
+            id: localStorage.id,
+            type: "message",
+            to: this.to,
+          };
+          globals.wsServer.send(JSON.stringify(sendMessage));
+
+          //this.$router.go(0);
         });
+    },
+    wsNotification() {
+      //Тестовое сообщение
+      let sendMessage = {
+        id: localStorage.id,
+        type: "message",
+        to: this.to,
+      };
+      globals.wsServer.onopen = function () {
+        globals.wsServer.send(JSON.stringify(sendMessage));
+      };
     },
   },
 };
