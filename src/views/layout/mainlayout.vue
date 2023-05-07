@@ -13,6 +13,7 @@
 <script>
 import menuboard from "@/components/menuboard.vue";
 import globals from "@/globals";
+import router from "@/router";
 export default {
   name: "mainlayout",
   components: {
@@ -37,16 +38,17 @@ export default {
     };
 
     globals.wsServer.onmessage = (ev) => {
-      //console.log(JSON.parse(ev.data));
       var resp = JSON.parse(ev.data);
       if (resp.type == "message") {
-        //если пришло новое сообщение
-        // тут думаю сделать запрос на выборку сообщений заново
-        // типо динамически работают
-        //router.go(0);
         this.notification();
       }
     };
+    if (typeof localStorage.token != "undefined") {
+      console.log("User Has token, try to grab info");
+    } else {
+      console.log("Not Loggin, Redirect to login");
+      router.push("/login");
+    }
   },
   methods: {
     notification() {

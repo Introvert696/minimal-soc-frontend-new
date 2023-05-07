@@ -12,6 +12,7 @@ import GroupProfileVIew from "@/views/GroupProfileView.vue";
 import GroupViewVue from "@/views/GroupView.vue";
 import SettingView from "@/views/SettingView.vue";
 import UserProfileView from "@/views/UserProfileView.vue";
+import ExitView from "@/views/ExitView.vue";
 
 const routes = [
   {
@@ -129,7 +130,7 @@ const routes = [
   {
     path: "/exit",
     name: "exit",
-    component: LoginView,
+    component: ExitView,
   },
   {
     path: "/:pathMatch(.*)*",

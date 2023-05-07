@@ -1,6 +1,7 @@
 <template>
   <form class="board login-board" @submit.prevent>
     <logo />
+
     <logininput
       type="text"
       name="email"

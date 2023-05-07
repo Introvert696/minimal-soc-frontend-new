@@ -73,12 +73,7 @@ export default {
     },
   },
   mounted() {
-    if (typeof localStorage.token != "undefined") {
-      console.log("User Has token, try to grab info");
-      this.grabPost();
-    } else {
-      console.log("Not Loggin, Redirect to login");
-    }
+    this.grabPost();
   },
 };
 </script>

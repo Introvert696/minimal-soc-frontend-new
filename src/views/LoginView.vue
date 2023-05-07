@@ -1,4 +1,7 @@
 <template>
+  <div class="error-login" @click="closeError">
+    <p>Введите правильный логин и пароль</p>
+  </div>
   <loginform
     class="login-form"
     @inputLogin="setLogin"
@@ -42,8 +45,19 @@ export default {
             localStorage.token = response.data.access_token;
             localStorage.id = response.data.user.id;
             this.$router.push("/feed");
+          })
+          .catch(() => {
+            this.openError();
           });
+      } else {
+        this.openError();
       }
+    },
+    openError() {
+      document.getElementsByClassName("error-login")[0].style.display = "block";
+    },
+    closeError() {
+      document.getElementsByClassName("error-login")[0].style.display = "none";
     },
   },
 };
