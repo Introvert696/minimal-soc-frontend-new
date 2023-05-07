@@ -1,5 +1,5 @@
 <template>
-  <mainlayout>
+  <mainlayout @message="newMessage">
     <selectionumailinfo
       :avatar="getImage(user.user_photo)"
       namelastname="пользователем"
@@ -16,14 +16,15 @@
 
         <todialogcontainer
           v-if="mes.from != user.id"
-          :avatar="getImage(groupinfo.seconduser.user_photo)"
-          :name="groupinfo.seconduser.name"
-          :lastname="groupinfo.seconduser.lastname"
+          :avatar="getImage(groupinfo.firstuser.user_photo)"
+          :name="groupinfo.firstuser.name"
+          :lastname="groupinfo.firstuser.lastname"
           :content="mes.content"
         />
       </div>
     </div>
     <sendmessageform
+      @send="getMessages"
       :to="
         groupinfo.first_user == user.id
           ? groupinfo.second_user
@@ -59,6 +60,11 @@ export default {
       groupinfo: {},
     };
   },
+  watch: {
+    messages() {
+      this.scrollToDown();
+    },
+  },
   methods: {
     getProfileInfo() {
       axios
@@ -77,7 +83,7 @@ export default {
         });
     },
     getMessages() {
-      console.log();
+      console.log("Parse message");
       axios
         .get(globals.API_URL + "messages_groups/" + this.$route.params.id, {
           headers: {
@@ -94,25 +100,26 @@ export default {
             router.push("/login");
           }
         });
+      this.scrollToDown();
     },
 
     getImage(image) {
       return globals.API_URL + "image/" + image;
     },
+    newMessage() {
+      this.getMessages();
+    },
+    scrollToDown() {
+      setTimeout(() => {
+        var messages = document.getElementsByClassName("dialog-container")[0];
+        //console.log(messages);
+        messages.scrollTop = 99999999;
+      }, 1000);
+    },
   },
   mounted() {
     this.getProfileInfo();
     this.getMessages();
-    globals.wsServer.onmessage = function (ev) {
-      console.log(JSON.parse(ev.data));
-      var resp = JSON.parse(ev.data);
-      if (resp.type == "message") {
-        //если пришло новое сообщение
-        // тут думаю сделать запрос на выборку сообщений заново
-        // типо динамически работают
-        router.go(0);
-      }
-    };
   },
 };
 </script>

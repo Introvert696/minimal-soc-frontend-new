@@ -40,7 +40,7 @@ export default {
             to: this.to,
           };
           globals.wsServer.send(JSON.stringify(sendMessage));
-
+          this.$emit("send");
           //this.$router.go(0);
         });
     },
