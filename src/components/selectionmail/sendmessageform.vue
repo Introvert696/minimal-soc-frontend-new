@@ -41,6 +41,7 @@ export default {
           };
           globals.wsServer.send(JSON.stringify(sendMessage));
           this.$emit("send");
+          this.content = "";
           //this.$router.go(0);
         });
     },

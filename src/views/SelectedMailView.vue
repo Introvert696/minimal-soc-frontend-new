@@ -7,18 +7,18 @@
     <div class="dialog-container">
       <div v-for="mes in messages" :key="mes">
         <fromdialogcontainer
-          v-if="mes.from == user.id"
-          :avatar="getImage(user.user_photo)"
-          :name="user.name"
-          :lastname="user.lastname"
+          v-if="groupinfo.firstuser.id == mes.from"
+          :avatar="getImage(groupinfo.firstuser.user_photo)"
+          :name="groupinfo.firstuser.name"
+          :lastname="groupinfo.firstuser.lastname"
           :content="mes.content"
         />
 
         <todialogcontainer
-          v-if="mes.from != user.id"
-          :avatar="getImage(groupinfo.firstuser.user_photo)"
-          :name="groupinfo.firstuser.name"
-          :lastname="groupinfo.firstuser.lastname"
+          v-if="groupinfo.firstuser.id != mes.from"
+          :avatar="getImage(groupinfo.seconduser.user_photo)"
+          :name="groupinfo.seconduser.name"
+          :lastname="groupinfo.seconduser.lastname"
           :content="mes.content"
         />
       </div>
@@ -91,9 +91,10 @@ export default {
           },
         })
         .then((el) => {
-          //console.log(el.data.messages);
+          console.log(el.data.messages);
           this.messages = el.data.messages;
           this.groupinfo = el.data;
+          console.log(this.groupinfo);
         })
         .catch((er) => {
           if (er.response.status == 401) {
