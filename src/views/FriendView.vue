@@ -1,6 +1,17 @@
 <template>
   <mainlayout>
     <searchuserform />
+
+    <div class="requests">
+      <friendrequest
+        v-for="req in this.friend_requests"
+        :key="req"
+        :id="req.firstuser.id"
+        :namelastname="req.firstuser.name + ' ' + req.firstuser.lastname"
+        :avatar="getPhotoUrl(req.firstuser.user_photo)"
+      />
+    </div>
+    <hr />
     <div class="friends-list">
       <div v-for="fr in friends" :key="fr">
         <friendboard
@@ -27,17 +38,20 @@ import searchuserform from "@/components/friend/searchuserform.vue";
 import friendboard from "@/components/friend/friendboard.vue";
 import axios from "axios";
 import globals from "@/globals";
+import friendrequest from "@/components/friend/friendrequest.vue";
 export default {
   name: "FriendView",
   components: {
     searchuserform,
     friendboard,
     mainlayout,
+    friendrequest,
   },
   data() {
     return {
       friends: [],
       id: 0,
+      friend_requests: [],
     };
   },
   methods: {
@@ -49,8 +63,11 @@ export default {
           },
         })
         .then((response) => {
-          console.log(response.data);
-          this.friends = response.data;
+          //console.log(response.data);
+          //получение друзей
+          this.friends = response.data.friend;
+          //получение запросов на добавление в друзья
+          this.friend_requests = response.data.requests;
         })
         .catch((resp) => {
           console.log(resp);
