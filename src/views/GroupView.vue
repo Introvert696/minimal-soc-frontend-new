@@ -1,7 +1,7 @@
 <template>
   <mainlayout>
     <searchgroup />
-    <!-- <creategroupbtn /> -->
+    <creategroupbtn />
 
     <groupboard
       v-for="g in groups"
@@ -18,7 +18,7 @@
 import mainlayout from "./layout/mainlayout.vue";
 import searchgroup from "@/components/group/searchgroup.vue";
 import groupboard from "@/components/group/groupboard.vue";
-// import creategroupbtn from "@/components/group/creategroupbtn.vue";
+import creategroupbtn from "@/components/group/creategroupbtn.vue";
 import axios from "axios";
 import globals from "@/globals";
 export default {
@@ -27,7 +27,7 @@ export default {
     mainlayout,
     searchgroup,
     groupboard,
-    // creategroupbtn,
+    creategroupbtn,
   },
   data() {
     return {

@@ -8,6 +8,7 @@
       :avatar="getPhoto(groupinfo.photo)"
       :is_sub="groupinfo.is_sub"
     />
+    <createNewPost v-if="userId == groupinfo.creater" :groupId="groupinfo.id" />
 
     <grouppost
       v-for="p in posts"
@@ -27,6 +28,7 @@ import profileinfo from "@/components/groupview/profileinfo.vue";
 import grouppost from "@/components/groupview/grouppost.vue";
 import axios from "axios";
 import globals from "@/globals";
+import createNewPost from "@/components/groupview/createNewPost.vue";
 
 export default {
   name: "GroupProfileVIew",
@@ -34,11 +36,13 @@ export default {
     mainlayout,
     profileinfo,
     grouppost,
+    createNewPost,
   },
   data() {
     return {
       groupinfo: {},
       posts: [],
+      userId: localStorage.id,
     };
   },
   methods: {
@@ -50,6 +54,7 @@ export default {
           },
         })
         .then((resp) => {
+          console.log(localStorage.id);
           this.groupinfo = resp.data;
           this.posts = resp.data.posts;
         });
