@@ -62,6 +62,20 @@
       placeholder="Повторите пароль"
       @inputEv="setPasswordAgain"
     />
+    <p
+      style="
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        color: white;
+        font-size: 12px;
+        margin-top: 15px;
+      "
+    >
+      При нажатии кнопки "Зарегистрироваться" даёте согласие на обработку
+      персональных данных, а так же соглашаетесь с политикой конфиденциальности
+      сайта
+    </p>
     <btnregister @click="register" />
     <loginlink link="/login" text="Есть аккаунт?" />
   </form>
@@ -112,7 +126,7 @@ export default {
       console.log(this.user_photo);
     },
     setBg(file) {
-      this.user_photo = file;
+      this.bg = file;
       console.log(this.bg);
     },
     setPassword(password) {
@@ -122,29 +136,42 @@ export default {
       this.password_confirmation = password;
     },
     register() {
-      var formData = new FormData();
-      var photo_user = document.querySelector("#input_file");
-      var bg = document.querySelector("#bg_image");
-      formData.append("photo_user", photo_user.files[0]);
-      formData.append("bg_image", bg.files[0]);
-      formData.append("name", this.name);
-      formData.append("lastname", this.lastname);
-      formData.append("login", this.login);
-      formData.append("birthday", this.birthday);
-      formData.append("email", this.email);
-      formData.append("password", this.password);
-      formData.append("password_confirmation", this.password_confirmation);
-      axios
-        .post(globals.API_URL + "register", formData)
-        .then((res) => {
-          console.log(res);
-          if (res.status == 201) {
-            router.push("/login");
-          }
-        })
-        .catch((er) => {
-          console.log(er);
-        });
+      if (
+        this.name == "" &&
+        this.lastname == "" &&
+        this.birthday == "" &&
+        this.login == "" &&
+        this.password == "" &&
+        this.email == "" &&
+        this.photo_user == "" &&
+        this.bg == ""
+      ) {
+        alert("Заполните поля правильно");
+      } else {
+        var formData = new FormData();
+        var photo_user = document.querySelector("#input_file");
+        var bg = document.querySelector("#bg_image");
+        formData.append("photo_user", photo_user.files[0]);
+        formData.append("bg_image", bg.files[0]);
+        formData.append("name", this.name);
+        formData.append("lastname", this.lastname);
+        formData.append("login", this.login);
+        formData.append("birthday", this.birthday);
+        formData.append("email", this.email);
+        formData.append("password", this.password);
+        formData.append("password_confirmation", this.password_confirmation);
+        axios
+          .post(globals.API_URL + "register", formData)
+          .then((res) => {
+            console.log(res);
+            if (res.status == 201) {
+              router.push("/login");
+            }
+          })
+          .catch((er) => {
+            console.log(er);
+          });
+      }
     },
   },
   components: {

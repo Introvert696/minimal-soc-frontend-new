@@ -5,9 +5,6 @@
       <p @click="goToUser">{{ namelastname }}</p>
       <a href="#" @click="sendMessage">Написать сообщение</a>
     </div>
-    <div class="friend-board-delete">
-      <a href="#">Удалить</a>
-    </div>
   </div>
 </template>
 
@@ -17,7 +14,7 @@ import axios from "axios";
 import globals from "@/globals";
 
 export default {
-  name: "friendboard",
+  name: "friendsearchboard",
   props: {
     namelastname: String,
     avatar: String,

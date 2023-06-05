@@ -9,6 +9,7 @@
         :id="req.firstuser.id"
         :namelastname="req.firstuser.name + ' ' + req.firstuser.lastname"
         :avatar="getPhotoUrl(req.firstuser.user_photo)"
+        :friendId="req.id"
       />
     </div>
     <hr />

@@ -15,7 +15,7 @@
       @inputField="setPassword"
     />
     <btnlogin @Login="login" />
-    <downbuttonlink text="Нету аккаунта?" link="/register" />
+    <downbuttonlink text="Нет аккаунта?" link="/register" />
   </form>
 </template>
 
