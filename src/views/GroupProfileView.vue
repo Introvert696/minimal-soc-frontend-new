@@ -1,6 +1,7 @@
 <template>
   <mainlayout>
     <profileinfo
+      :id="groupinfo.id"
       :title="groupinfo.title"
       :desk="groupinfo.desk"
       membercount="2020"

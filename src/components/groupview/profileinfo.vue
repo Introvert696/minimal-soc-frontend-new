@@ -15,7 +15,7 @@
         <span>{{ desk }}</span>
       </div>
       <div class="link-gr-board flex">
-        <a href="#" v-if="is_sub == false">Подписаться</a>
+        <a href="#" v-if="is_sub == false" @click="subscribe">Подписаться</a>
         <!-- <p>Подписчики: {{ membercount }}</p> -->
       </div>
     </div>
@@ -23,6 +23,9 @@
 </template>
 
 <script>
+import globals from "@/globals";
+import router from "@/router";
+import axios from "axios";
 export default {
   name: "profileinfo",
   props: {
@@ -32,6 +35,30 @@ export default {
     membercount: String,
     id: String,
     is_sub: Boolean,
+  },
+  methods: {
+    subscribe() {
+      axios
+        .post(
+          globals.API_URL + "subscribe_to_groups/",
+          {
+            group_id: this.id,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.token}`,
+            },
+          }
+        )
+        .then((resp) => {
+          console.log(resp);
+          console.log(this.id);
+          router.go(0);
+        })
+        .catch((resp) => {
+          console.log(resp);
+        });
+    },
   },
 };
 </script>

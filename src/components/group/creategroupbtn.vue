@@ -14,8 +14,16 @@
         <input type="text" placeholder="Введите описание..." name="desk" />
       </div>
       <div class="create-group-input">
-        <label for="avatar">Ссылка на аватарку:</label> <br />
-        <input type="text" placeholder="Введите название" name="avatar" />
+        <label for="photo">Ссылка на аватарку:</label> <br />
+        <label for="photo">ВЫБРАТЬ</label>
+        <input
+          type="file"
+          hidden
+          placeholder="Введите название"
+          name="photo"
+          id="photo"
+          style="text-align: center; width: 100%"
+        />
       </div>
       <div class="create-group-sub">
         <button>Создать</button>

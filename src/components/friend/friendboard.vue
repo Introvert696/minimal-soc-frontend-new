@@ -6,7 +6,7 @@
       <a href="#" @click="sendMessage">Написать сообщение</a>
     </div>
     <div class="friend-board-delete">
-      <a href="#">Удалить</a>
+      <a href="#" @click="deleteFriend">Удалить</a>
     </div>
   </div>
 </template>
@@ -22,6 +22,7 @@ export default {
     namelastname: String,
     avatar: String,
     id: Number,
+    friendId: Number,
   },
   methods: {
     goToUser() {
@@ -43,6 +44,25 @@ export default {
         .then((resp) => {
           console.log(resp);
           router.push("/mail/" + resp.data.id);
+        })
+        .catch((resp) => {
+          console.log(resp);
+        });
+    },
+    deleteFriend() {
+      axios
+        .delete(
+          globals.API_URL + "friends/" + this.friendId,
+
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.token}`,
+            },
+          }
+        )
+        .then((resp) => {
+          console.log(resp);
+          router.go(0);
         })
         .catch((resp) => {
           console.log(resp);

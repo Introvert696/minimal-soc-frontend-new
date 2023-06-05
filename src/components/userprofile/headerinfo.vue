@@ -11,7 +11,7 @@
         </div>
         <div class="profile-nav flex">
           <div class="profile-nav-link">
-            <a href="/feed">Написать сообщение</a>
+            <a href="#" @click="sendMessage">Написать сообщение</a>
           </div>
           <div class="profile-nav-link">
             <a href="/friend">Добавить в друзья</a>
@@ -22,6 +22,9 @@
   </div>
 </template>
 <script>
+import globals from "@/globals";
+import axios from "axios";
+import router from "@/router";
 export default {
   name: "headerinfo",
   props: {
@@ -29,6 +32,29 @@ export default {
     username: String,
     avatar: String,
     id: Number,
+  },
+  methods: {
+    sendMessage() {
+      axios
+        .post(
+          globals.API_URL + "messages_groups",
+          {
+            second_user: this.id,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.token}`,
+            },
+          }
+        )
+        .then((resp) => {
+          console.log(resp);
+          router.push("/mail/" + resp.data.id);
+        })
+        .catch((resp) => {
+          console.log(resp);
+        });
+    },
   },
 };
 </script>

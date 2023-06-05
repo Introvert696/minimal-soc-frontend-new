@@ -20,6 +20,7 @@
           :namelastname="fr.firstuser.name + ' ' + fr.firstuser.lastname"
           :avatar="getPhotoUrl(fr.firstuser.user_photo)"
           :id="fr.firstuser.id"
+          :friendId="fr.id"
         />
         <friendboard
           v-if="fr.second_user != id"
@@ -64,7 +65,7 @@ export default {
           },
         })
         .then((response) => {
-          //console.log(response.data);
+          // console.log(response.data);
           //получение друзей
           this.friends = response.data.friend;
           //получение запросов на добавление в друзья

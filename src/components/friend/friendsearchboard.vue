@@ -4,6 +4,9 @@
     <div class="friend-board-text">
       <p @click="goToUser">{{ namelastname }}</p>
       <a href="#" @click="sendMessage">Написать сообщение</a>
+      <a href="#" @click="addToFriend" style="margin-left: 10px"
+        >Добавить в друзья</a
+      >
     </div>
   </div>
 </template>
@@ -43,6 +46,24 @@ export default {
         })
         .catch((resp) => {
           console.log(resp);
+        });
+    },
+    addToFriend() {
+      axios
+        .post(
+          globals.API_URL + "friends",
+          {
+            second_user: this.id,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.token}`,
+            },
+          }
+        )
+        .then((resp) => {
+          console.log(resp);
+          router.go(0);
         });
     },
   },

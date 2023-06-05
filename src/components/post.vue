@@ -4,7 +4,7 @@
       <div class="post-board-header-user-info flex">
         <img :src="getImage(avatar)" alt="#" width="50" height="50" />
         <div class="post-board-header-user-info-title">
-          <p>{{ namelastname }}</p>
+          <p @click="goToUser" style="cursor: pointer">{{ namelastname }}</p>
           <span>@{{ login }}</span>
         </div>
       </div>
@@ -30,6 +30,7 @@
 <script>
 import globals from "@/globals";
 import axios from "axios";
+import router from "@/router";
 export default {
   name: "post",
   data() {
@@ -64,6 +65,9 @@ export default {
     getImage(image) {
       var imagestring = globals.API_URL + "image/" + image;
       return imagestring;
+    },
+    goToUser() {
+      router.push("/profile/" + this.creater);
     },
   },
 };
