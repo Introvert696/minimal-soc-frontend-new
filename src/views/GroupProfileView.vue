@@ -7,6 +7,7 @@
       membercount="2020"
       :avatar="getPhoto(groupinfo.photo)"
       :is_sub="groupinfo.is_sub"
+      v-on:subscribe="subsctibe_to_group"
     />
     <createNewPost v-if="userId == groupinfo.creater" :groupId="groupinfo.id" />
 
@@ -29,6 +30,7 @@ import grouppost from "@/components/groupview/grouppost.vue";
 import axios from "axios";
 import globals from "@/globals";
 import createNewPost from "@/components/groupview/createNewPost.vue";
+// import router from "@/router";
 
 export default {
   name: "GroupProfileVIew",
@@ -61,6 +63,27 @@ export default {
     },
     getPhoto(raw) {
       return globals.API_URL + "image/" + raw;
+    },
+    subsctibe_to_group(id) {
+      axios
+        .post(
+          globals.API_URL + "subscribe_to_groups",
+          {
+            group_id: id,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.token}`,
+            },
+          }
+        )
+        .then((resp) => {
+          console.log(resp);
+          console.log(this.id);
+        })
+        .catch((resp) => {
+          console.log(resp);
+        });
     },
   },
   mounted() {

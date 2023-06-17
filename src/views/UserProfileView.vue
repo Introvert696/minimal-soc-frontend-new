@@ -4,6 +4,7 @@
       :namelastname="userinfo.name + ' ' + userinfo.lastname"
       :username="userinfo.login"
       :avatar="getImage(userinfo.user_photo)"
+      :bg="getImage(userinfo.bg_image)"
     />
 
     <post

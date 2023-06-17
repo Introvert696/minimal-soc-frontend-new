@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import globals from "@/globals";
-import router from "@/router";
-import axios from "axios";
+// import globals from "@/globals";
+// import router from "@/router";
+// import axios from "axios";
 export default {
   name: "profileinfo",
   props: {
@@ -38,26 +38,7 @@ export default {
   },
   methods: {
     subscribe() {
-      axios
-        .post(
-          globals.API_URL + "subscribe_to_groups/",
-          {
-            group_id: this.id,
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.token}`,
-            },
-          }
-        )
-        .then((resp) => {
-          console.log(resp);
-          console.log(this.id);
-          router.go(0);
-        })
-        .catch((resp) => {
-          console.log(resp);
-        });
+      this.$emit("subscribe", this.id);
     },
   },
 };

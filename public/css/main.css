@@ -874,3 +874,11 @@ a {
   color: white;
   border-radius: 10px;
 }
+.all-users-content {
+  display: none;
+}
+.all-users-title {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}

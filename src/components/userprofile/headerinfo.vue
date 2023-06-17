@@ -1,6 +1,6 @@
 <template>
   <div class="user-header-info">
-    <img src="@/assets/bg-profile.png" alt="bg-user" />
+    <img :src="bg" alt="bg-user" />
     <div class="user-link">
       <img :src="avatar" alt="avatar" width="100" height="100" />
 
@@ -32,6 +32,7 @@ export default {
     username: String,
     avatar: String,
     id: Number,
+    bg: String,
   },
   methods: {
     sendMessage() {

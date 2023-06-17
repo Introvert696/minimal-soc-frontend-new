@@ -1,6 +1,6 @@
 export default {
   API_DEBAG: "http://127.0.0.1:8000/api/",
-  API_URL: "http://127.0.0.1:8000/api/",
+  API_URL: "https://minimalsoc.eurodir.ru/api/",
   API_PROD: "https://minimalsoc.eurodir.ru/api/",
   wsServer: new WebSocket("wss://introvert696.site:27800"),
   getImage(image) {
