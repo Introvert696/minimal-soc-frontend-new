@@ -1,6 +1,6 @@
 <template>
   <div class="notificator" @click="closeNot">
-    <p>Новое сообщение</p>
+    <p>Новое сообщение {{ namelastname }}</p>
   </div>
 
   <div class="main-container">
@@ -14,6 +14,8 @@
 import menuboard from "@/components/menuboard.vue";
 import globals from "@/globals";
 import router from "@/router";
+import axios from "axios";
+
 export default {
   name: "mainlayout",
   components: {
@@ -23,9 +25,12 @@ export default {
     return {
       connection: null,
       a: "dd",
+      namelastname: "",
     };
   },
   mounted() {
+    //получить
+
     let conForm = {
       id: localStorage.id,
       type: "connect",
@@ -39,8 +44,9 @@ export default {
 
     globals.wsServer.onmessage = (ev) => {
       var resp = JSON.parse(ev.data);
+
       if (resp.type == "message") {
-        this.notification();
+        this.notification(resp.from);
       }
     };
     if (typeof localStorage.token != "undefined") {
@@ -51,9 +57,19 @@ export default {
     }
   },
   methods: {
-    notification() {
+    notification(id) {
       let notf = document.getElementsByClassName("notificator")[0];
       notf.style.display = "block";
+      axios
+        .get(globals.API_URL + "users/" + id, {
+          headers: {
+            Authorization: `Bearer ${localStorage.token}`,
+          },
+        })
+        .then((ev) => {
+          console.log(ev.data.user.name + " " + ev.data.user.lastname);
+          this.namelastname = ev.data.user.name + " " + ev.data.user.lastname;
+        });
       this.$emit("message");
     },
     closeNot() {

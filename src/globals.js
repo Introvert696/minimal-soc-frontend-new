@@ -3,6 +3,7 @@ export default {
   API_URL: "https://minimalsoc.eurodir.ru/api/",
   API_PROD: "https://minimalsoc.eurodir.ru/api/",
   wsServer: new WebSocket("wss://introvert696.site:27800"),
+  // wsServer: new WebSocket("ws://127.0.0.1:27800"),
   getImage(image) {
     var imagestring = this.API_URL + "image/" + image;
     return imagestring;

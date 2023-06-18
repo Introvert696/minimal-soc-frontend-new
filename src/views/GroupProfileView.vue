@@ -30,6 +30,7 @@ import grouppost from "@/components/groupview/grouppost.vue";
 import axios from "axios";
 import globals from "@/globals";
 import createNewPost from "@/components/groupview/createNewPost.vue";
+import router from "@/router";
 // import router from "@/router";
 
 export default {
@@ -80,6 +81,7 @@ export default {
         .then((resp) => {
           console.log(resp);
           console.log(this.id);
+          router.go(0);
         })
         .catch((resp) => {
           console.log(resp);
